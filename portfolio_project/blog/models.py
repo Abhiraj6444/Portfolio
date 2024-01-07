@@ -1,3 +1,4 @@
+from typing import Any
 from django.db import models
 
 class Blog(models.Model):
@@ -5,4 +6,11 @@ class Blog(models.Model):
     pub_Date = models.DateTimeField()
     body = models.TextField()
     image = models.ImageField(upload_to="images/")
+    
+    def summart(self):
+        return self.body[:100]
+    
+
+
+
     
